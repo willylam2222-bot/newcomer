@@ -1,0 +1,104 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Spain Eclipse 2026 Path Checker — Is Your City in the Total Eclipse?</title>
+<meta name="description" content="Free checker: pick a Spanish city and see if it's in the August 12 2026 total eclipse path of totality, your totality time, the Sun's altitude and clear-sky odds.">
+<link rel="canonical" href="https://willylam2222-bot.github.io/newcomer/spain-eclipse-path-checker/">
+<meta property="og:title" content="Are you in the 2026 Spain total eclipse path? Free checker">
+<meta property="og:description" content="Pick your city — see totality vs partial, your local totality time, Sun altitude and clear-sky odds for August 12 2026.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Spain Eclipse 2026 Path Checker","applicationCategory":"TravelApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Check whether a Spanish city is in the August 12 2026 total solar eclipse path of totality, with totality time, Sun altitude and clear-sky odds."}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--deep:#05070f;--star:#e8ecf7;--mut:#9aa6c4;--line:#26304d;--gold:#f4c15a;--corona:#ffd97a;--good:#3fbf7f;--warn:#e8913b;--bad:#d8607a}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--star);background:radial-gradient(120% 80% at 80% -10%,#16203c 0%,#0a0e1a 45%,#05070f 100%);min-height:100vh;padding:0 20px}
+.wrap{max-width:680px;margin:0 auto;padding:48px 0 80px}
+.kick{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:800}
+h1{font-family:"Playfair Display",Georgia,serif;font-weight:800;font-size:40px;line-height:1.05;margin:10px 0 8px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--corona)}
+.sub{color:var(--mut);font-size:16px;line-height:1.55;margin-bottom:26px}
+label{display:block;font-size:13px;color:var(--mut);margin:0 0 8px;letter-spacing:.5px}
+select{width:100%;padding:15px 16px;border-radius:12px;background:#0e1424;color:#fff;border:1px solid var(--line);font-size:17px;appearance:none;cursor:pointer}
+select:focus{outline:none;border-color:var(--gold)}
+.card{margin-top:22px;background:linear-gradient(180deg,#131a2e,#0e1424);border:1px solid var(--line);border-radius:16px;padding:24px;display:none}
+.card.show{display:block;animation:f .3s ease}
+@keyframes f{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.verdict{font-family:"Playfair Display",Georgia,serif;font-size:27px;font-weight:800;line-height:1.1;margin-bottom:4px}
+.city{font-size:13px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-bottom:14px}
+.badge{display:inline-block;font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:5px 11px;border-radius:20px;color:#05070f;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:16px 0}
+.stat{background:#0b1120;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.stat .n{font-size:20px;font-weight:800;color:var(--corona);font-family:"Playfair Display",serif}
+.stat .l{font-size:10px;color:var(--mut);letter-spacing:1px;text-transform:uppercase;margin-top:3px}
+.note{font-size:14px;line-height:1.55;color:#d7ddee;border-left:3px solid var(--gold);padding-left:12px;margin-top:6px}
+.cta{display:block;margin-top:20px;background:var(--gold);color:#05070f;text-align:center;font-weight:800;padding:15px;border-radius:12px;text-decoration:none;font-size:16px}
+.cta:hover{background:var(--corona)}
+.disc{font-size:12px;color:#63709a;line-height:1.5;margin-top:18px}
+.links{margin-top:26px;font-size:14px;color:var(--mut)}
+.links a{color:var(--gold);text-decoration:none}
+.foot{margin-top:40px;font-size:11px;color:#4a5578;letter-spacing:.5px}
+</style></head><body>
+<div class="wrap">
+<div class="kick">Total Solar Eclipse · 12 Aug 2026</div>
+<h1>Is your city in the <em>path of totality?</em></h1>
+<p class="sub">Pick a Spanish city to see whether it gets the <strong>total</strong> eclipse or only a partial one — plus your totality time, how low the Sun sits, and the clear-sky odds.</p>
+<label for="city">Choose a city</label>
+<select id="city"><option value="">— Select a city —</option></select>
+<div class="card" id="card"></div>
+<div class="links">Going? Read <a href="/newcomer/spain-eclipse-2026-where-to-watch/">where to actually stand</a> · <a href="/newcomer/spain-eclipse-2026-hotels-where-to-stay/">where to stay</a> · <a href="/newcomer/spain-eclipse-2026-weather-clear-skies/">clear-sky odds</a></div>
+<p class="disc">Path edges are precise — cities near the edge can shift a partial/total result over a few kilometres. Times are local and approximate; always confirm your exact viewpoint and the 48-hour forecast. Data from public NASA / national-observatory eclipse maps.</p>
+<div class="foot">A free tool from Newcomer · newcomer field guides</div>
+</div>
+<script>
+var CITIES={
+"A Coruña":{s:"total",tot:"~1m40s",sun:"12°",sky:"Risky",note:"Highest Sun against the horizon — best odds vs obstruction — but Atlantic cloud and sea haze are a real risk."},
+"Santiago de Compostela":{s:"total",tot:"~1m45s",sun:"11°",sky:"Risky",note:"In the path with a fairly high Sun, but Galicia's Atlantic weather is the gamble."},
+"Oviedo":{s:"total",tot:"~1m48s",sun:"10°",sky:"Fair",note:"Near the centre-line — among the longest totality — but mountains to the west; pick an open viewpoint."},
+"Gijón":{s:"total",tot:"~1m47s",sun:"10°",sky:"Risky",note:"Long totality on the coast; a clear sea horizon to the west-northwest is ideal, weather permitting."},
+"León":{s:"total",tot:"~1m45s",sun:"9°",sky:"Good",note:"Centre-line, long totality, and better clear-sky odds than the coast. A strong choice."},
+"Palencia":{s:"total",tot:"~1m24s",sun:"8°",sky:"Best",note:"On the centre-line, flat Meseta terrain for a clean horizon, and among the best clear-sky odds. Quieter than Burgos."},
+"Burgos":{s:"total",tot:"~1m30s",sun:"8°",sky:"Good",note:"Great balance of view and logistics — which is why it books out fast."},
+"Zamora":{s:"total",tot:"~1m35s",sun:"9°",sky:"Good",note:"In the path with open terrain and solid clear-sky odds; a good, calmer base."},
+"Valladolid":{s:"edge",tot:"brief",sun:"9°",sky:"Good",note:"Near the southern edge of the path — totality is short and edge-sensitive. Verify your exact spot, or drive a little north."},
+"Salamanca":{s:"partial",tot:"—",sun:"—",sky:"Good",note:"Just OUTSIDE the path — partial only — but a top base city with sane prices. Drive 30–60 min north into totality on the day."},
+"Bilbao":{s:"total",tot:"~1m10s",sun:"7°",sky:"Risky",note:"In the path but coastal cloud is a threat and rooms are effectively gone. Have a plan B."},
+"Santander":{s:"total",tot:"~1m15s",sun:"8°",sky:"Risky",note:"Coastal totality — clear western sea horizon helps, but Cantabrian cloud is the risk."},
+"Logroño":{s:"total",tot:"~1m20s",sun:"7°",sky:"Good",note:"In the path with decent interior clear-sky odds; a workable, less-hyped base."},
+"Pamplona":{s:"total",tot:"~1m05s",sun:"7°",sky:"Fair",note:"In the path but low Sun and busy — secure an open western horizon."},
+"Zaragoza":{s:"total",tot:"~1m25s",sun:"6°",sky:"Good",note:"A real city with transport and hotels, near the centre-line. Low Sun — face a clear west-northwest."},
+"Huesca":{s:"total",tot:"~1m15s",sun:"6°",sky:"Good",note:"In the path with good interior odds; quieter than Zaragoza."},
+"Valencia":{s:"total",tot:"brief",sun:"4°",sky:"Fair",note:"Very low Sun near sunset — you need a clean, flat sea horizon to the west-northwest. Dramatic if clear."},
+"Palma de Mallorca":{s:"total",tot:"brief",sun:"2°",sky:"Fair",note:"The Sun is almost setting — spectacular but high risk of obstruction. Only with a perfectly open horizon."},
+"Madrid":{s:"partial",tot:"—",sun:"—",sky:"—",note:"OUTSIDE the path — partial eclipse only, the Sun never fully covered. Treat it as a gateway and travel north."},
+"Barcelona":{s:"partial",tot:"—",sun:"—",sky:"—",note:"OUTSIDE the path — partial only. Travel north-west into the path for totality."},
+"Seville":{s:"partial",tot:"—",sun:"—",sky:"—",note:"Southern Spain — a smaller partial eclipse only. Far from the path."},
+"Málaga":{s:"partial",tot:"—",sun:"—",sky:"—",note:"Partial only, and a modest one this far south."},
+"Granada":{s:"partial",tot:"—",sun:"—",sky:"—",note:"Partial only — well south of the path of totality."},
+"Alicante":{s:"partial",tot:"—",sun:"—",sky:"—",note:"Partial only. The nearest totality is up the coast toward Valencia and inland."}
+};
+var PRODUCT="https://payhip.com/b/X3nRo";
+var sel=document.getElementById('city'), card=document.getElementById('card');
+Object.keys(CITIES).sort().forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c;sel.appendChild(o);});
+function skyColor(s){return s==="Best"||s==="Good"?"var(--good)":s==="Fair"?"var(--warn)":s==="Risky"?"var(--bad)":"var(--mut)";}
+function render(c){
+  var d=CITIES[c]; if(!d){card.className="card";return;}
+  var badge,verdict,color;
+  if(d.s==="total"){badge="In totality";color="var(--good)";verdict="Yes — "+c+" is in the path of totality.";}
+  else if(d.s==="edge"){badge="Near the edge";color="var(--warn)";verdict=c+" is right on the edge of the path.";}
+  else{badge="Partial only";color="var(--bad)";verdict="No — "+c+" sees a partial eclipse only.";}
+  var stats = (d.s!=="partial") ? '<div class="grid">'+
+     '<div class="stat"><div class="n">'+d.tot+'</div><div class="l">Totality</div></div>'+
+     '<div class="stat"><div class="n">'+d.sun+'</div><div class="l">Sun altitude</div></div>'+
+     '<div class="stat"><div class="n">'+d.sky+'</div><div class="l">Clear-sky odds</div></div>'+
+     '<div class="stat"><div class="n">~20:29</div><div class="l">Approx. totality time</div></div>'+
+     '</div>' : '';
+  card.innerHTML='<span class="badge" style="background:'+color+'">'+badge+'</span>'+
+    '<div class="verdict">'+verdict+'</div><div class="city">'+c+' · 12 August 2026</div>'+
+    stats+'<div class="note">'+d.note+'</div>'+
+    '<a class="cta" href="'+PRODUCT+'">Get the Spain Eclipse Playbook → $9</a>';
+  card.className="card show";
+}
+sel.addEventListener('change',function(){render(this.value);});
+if(location.hash==="#demo"){sel.value="Palencia";render("Palencia");}
+</script>
+</body></html>
