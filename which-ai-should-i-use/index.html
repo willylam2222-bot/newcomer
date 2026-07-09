@@ -1,0 +1,100 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Which AI Should You Use? ChatGPT vs Claude vs Gemini Picker (2026)</title>
+<meta name="description" content="Answer a few questions and get a personalised recommendation: ChatGPT, Claude or Gemini. A free 2026 picker based on what you actually do.">
+<link rel="canonical" href="https://willylam2222-bot.github.io/newcomer/which-ai-should-i-use/">
+<meta property="og:title" content="Which AI should you use? ChatGPT vs Claude vs Gemini">
+<meta property="og:description" content="A free picker — answer a few questions, get the right AI assistant for your work.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Which AI Should You Use? Picker","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A free picker that recommends ChatGPT, Claude or Gemini based on what you do."}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0c0f17;--card:#141824;--line:#28304a;--star:#eef1fa;--mut:#98a2bd;--acc:#6b7cff;--acc2:#a5b0ff}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#eef1fa;background:radial-gradient(120% 80% at 80% -10%,#1a2135 0%,#10131f 45%,#0a0d15 100%);min-height:100vh;padding:0 20px}
+.wrap{max-width:640px;margin:0 auto;padding:46px 0 80px}
+.kick{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--acc2);font-weight:800}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:40px;line-height:1.03;margin:10px 0 8px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--acc2)}
+.sub{color:var(--mut);font-size:16px;line-height:1.55;margin-bottom:26px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.q .t{font-weight:700;font-size:15px;margin-bottom:12px}
+.opt{display:block;width:100%;text-align:left;background:#0f1320;border:1px solid var(--line);color:#d7ddf0;border-radius:10px;padding:12px 14px;margin:8px 0;font-size:14px;cursor:pointer;transition:.12s}
+.opt:hover{border-color:var(--acc)}
+.opt.sel{border-color:var(--acc);background:#161d33;color:#fff}
+.go{display:block;width:100%;margin-top:18px;background:var(--acc);color:#0a0d15;text-align:center;font-weight:800;padding:15px;border-radius:12px;border:none;font-size:16px;cursor:pointer}
+.go:disabled{opacity:.4;cursor:not-allowed}
+.result{display:none;background:linear-gradient(180deg,#161d33,#0f1320);border:1px solid var(--line);border-radius:16px;padding:26px;margin-top:22px}
+.result.show{display:block;animation:f .3s ease}
+@keyframes f{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.win{font-family:"Fraunces",serif;font-weight:900;font-size:30px}
+.win span{color:var(--acc2)}
+.why{font-size:14px;color:#d7ddf0;line-height:1.6;margin:10px 0}
+.second{font-size:13px;color:var(--mut);margin-top:8px}
+.bars{margin:16px 0}
+.bar{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:13px}
+.bar .n{width:70px;color:#cfd6ea}
+.bar .track{flex:1;height:8px;background:#0b0e18;border-radius:6px;overflow:hidden}
+.bar .fill{height:100%;background:var(--acc)}
+.cta{display:block;margin-top:20px;background:var(--acc2);color:#0a0d15;text-align:center;font-weight:800;padding:15px;border-radius:12px;text-decoration:none;font-size:15px}
+.links{margin-top:22px;font-size:14px;color:var(--mut)}.links a{color:var(--acc2);text-decoration:none}
+.foot{margin-top:34px;font-size:11px;color:#586084}
+.disc{font-size:12px;color:#586084;line-height:1.5;margin-top:16px}
+</style></head><body>
+<div class="wrap">
+<div class="kick">Free Picker · 2026</div>
+<h1>Which AI should <em>you</em> use?</h1>
+<p class="sub">ChatGPT, Claude or Gemini? Answer a few questions about what you actually do and get a straight recommendation — no fanboy noise.</p>
+<div id="quiz"></div>
+<button class="go" id="go" disabled>See my recommendation</button>
+<div class="result" id="result"></div>
+<div class="links">Want the full breakdown? Read <a href="/newcomer/chatgpt-vs-claude-vs-gemini/">ChatGPT vs Claude vs Gemini</a> · <a href="/newcomer/best-free-ai-tools-2026/">the best free AI tools</a></div>
+<p class="disc">These tools leapfrog each other every few months, so treat this as a starting point, not gospel. The free tiers are good enough to try two and keep whichever wins your work.</p>
+<div class="foot">A free tool from Newcomer · newcomer field guides</div>
+</div>
+<script>
+var Q=[
+ {t:"What will you use it for most?",o:[["Everyday tasks, a bit of everything",{c:2,g:1}],["Writing & editing (long or careful)",{cl:3}],["Coding / technical work",{cl:2,c:2}],["Research & summarising the web",{g:2,c:1}]]},
+ {t:"Do you live in Google apps (Gmail, Docs)?",o:[["Yes, all day",{g:3}],["Somewhat",{g:1}],["Not really",{}]]},
+ {t:"How much do you care about the ecosystem (voice, image gen, apps, plugins)?",o:[["A lot — I want the biggest toolbox",{c:3}],["Some",{c:1}],["Just want great answers",{cl:1}]]},
+ {t:"Your typical task length?",o:[["Short back-and-forth",{c:1,g:1}],["Long documents / big context",{cl:2,g:1}]]},
+ {t:"Budget?",o:[["Free only",{g:1,c:1,cl:1}],["Happy to pay for the best",{}]]}
+];
+var NAMES={c:"ChatGPT",cl:"Claude",g:"Gemini"};
+var BLURB={
+ c:"the most versatile all-rounder with the biggest ecosystem — voice, image generation, custom GPTs and endless integrations. The safe pick if you only want one.",
+ cl:"the strongest for writing, careful reasoning, long documents and following detailed instructions. The choice when the words really matter.",
+ g:"deeply woven into Google — Gmail, Docs, Search, YouTube — with huge context. The best fit when your work already lives in Google's world."
+};
+var quiz=document.getElementById('quiz'),go=document.getElementById('go'),ans={};
+Q.forEach(function(q,i){
+  var d=document.createElement('div');d.className='q';
+  var h='<div class="t">'+(i+1)+'. '+q.t+'</div>';
+  q.o.forEach(function(o,j){h+='<button class="opt" data-q="'+i+'" data-j="'+j+'">'+o[0]+'</button>';});
+  d.innerHTML=h;quiz.appendChild(d);
+});
+quiz.addEventListener('click',function(e){
+  var b=e.target.closest('.opt');if(!b)return;
+  var qi=+b.dataset.q;
+  b.parentElement.querySelectorAll('.opt').forEach(function(x){x.classList.remove('sel');});
+  b.classList.add('sel');ans[qi]=+b.dataset.j;
+  go.disabled=Object.keys(ans).length<Q.length;
+});
+go.addEventListener('click',function(){
+  var s={c:0,cl:0,g:0};
+  Object.keys(ans).forEach(function(qi){var w=Q[qi].o[ans[qi]][1];for(var k in w)s[k]+=w[k];});
+  var order=Object.keys(s).sort(function(a,b){return s[b]-s[a];});
+  var win=order[0],second=order[1];
+  var max=Math.max(s.c,s.cl,s.g,1);
+  var bars=['c','cl','g'].map(function(k){return '<div class="bar"><div class="n">'+NAMES[k]+'</div><div class="track"><div class="fill" style="width:'+Math.round(s[k]/max*100)+'%"></div></div></div>';}).join('');
+  var r=document.getElementById('result');
+  r.innerHTML='<div class="win">Use <span>'+NAMES[win]+'</span></div>'+
+    '<div class="why">For what you described, '+NAMES[win]+' is '+BLURB[win]+'</div>'+
+    '<div class="bars">'+bars+'</div>'+
+    '<div class="second"><b>Close second:</b> '+NAMES[second]+'. Both free tiers are good — try '+NAMES[win]+' first, and reach for '+NAMES[second]+' when your task leans its way.</div>'+
+    '<a class="cta" href="https://payhip.com/b/Hkhzv">Get genuinely good with it → The Everyday AI Handbook ($9)</a>';
+  r.className='result show';r.scrollIntoView({block:'center'});
+});
+if(location.hash==="#demo"){Q.forEach(function(q,i){ans[i]=0;quiz.querySelectorAll('[data-q="'+i+'"]')[0].classList.add('sel');});go.disabled=false;go.click();}
+</script>
+</body></html>
