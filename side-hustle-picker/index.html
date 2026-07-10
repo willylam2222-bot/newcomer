@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Side Hustle Picker: Find a Realistic Side Hustle for You (2026)</title>
+<meta name="description" content="Answer a few honest questions and get a realistic side hustle matched to your money, time, skills and goal. Free, no-hype picker for 2026.">
+<link rel="canonical" href="https://willylam2222-bot.github.io/newcomer/side-hustle-picker/">
+<meta property="og:title" content="Side Hustle Picker — find one that actually fits you">
+<meta property="og:description" content="A free, honest picker: your money, time and skills → a realistic side hustle to start this week.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,800;9..144,900&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Side Hustle Picker","applicationCategory":"BusinessApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A free picker that matches a realistic side hustle to your money, time, skills and goal."}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0b1410;--card:#111c16;--line:#25382c;--star:#eafff3;--mut:#93b3a2;--acc:#20c069;--acc2:#7dff9f}
+body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:#eafff3;background:radial-gradient(120% 80% at 80% -10%,#12281c 0%,#0d1a13 45%,#081109 100%);min-height:100vh;padding:0 20px}
+.wrap{max-width:640px;margin:0 auto;padding:46px 0 80px}
+.kick{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--acc2);font-weight:800}
+h1{font-family:"Fraunces",Georgia,serif;font-weight:900;font-size:40px;line-height:1.03;margin:10px 0 8px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--acc2)}
+.sub{color:var(--mut);font-size:16px;line-height:1.55;margin-bottom:26px}
+.q{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin:14px 0}
+.q .t{font-weight:700;font-size:15px;margin-bottom:12px}
+.opt{display:block;width:100%;text-align:left;background:#0d1712;border:1px solid var(--line);color:#d7f0e2;border-radius:10px;padding:12px 14px;margin:8px 0;font-size:14px;cursor:pointer;transition:.12s}
+.opt:hover{border-color:var(--acc)}.opt.sel{border-color:var(--acc);background:#14261b;color:#fff}
+.go{display:block;width:100%;margin-top:18px;background:var(--acc);color:#06120b;text-align:center;font-weight:800;padding:15px;border-radius:12px;border:none;font-size:16px;cursor:pointer}
+.go:disabled{opacity:.4;cursor:not-allowed}
+.result{display:none;background:linear-gradient(180deg,#14261b,#0d1712);border:1px solid var(--line);border-radius:16px;padding:26px;margin-top:22px}
+.result.show{display:block;animation:f .3s ease}@keyframes f{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.win{font-family:"Fraunces",serif;font-weight:900;font-size:28px;line-height:1.1}
+.win span{color:var(--acc2)}
+.why{font-size:14px;color:#d7f0e2;line-height:1.6;margin:12px 0}
+.steps{margin:12px 0}.steps li{font-size:13.5px;color:#cfe6da;margin:7px 0;padding-left:16px;position:relative;list-style:none}.steps li:before{content:"›";position:absolute;left:0;color:var(--acc2);font-weight:800}
+.cta{display:block;margin-top:20px;background:var(--acc2);color:#06120b;text-align:center;font-weight:800;padding:15px;border-radius:12px;text-decoration:none;font-size:15px}
+.links{margin-top:22px;font-size:14px;color:var(--mut)}.links a{color:var(--acc2);text-decoration:none}
+.disc{font-size:12px;color:#5f7d6d;line-height:1.5;margin-top:16px}
+.foot{margin-top:34px;font-size:11px;color:#4a6555}
+</style></head><body>
+<div class="wrap">
+<div class="kick">Free Picker · 2026</div>
+<h1>Find a side hustle that <em>actually fits you</em></h1>
+<p class="sub">No hype, no "passive income" fantasy. Answer a few honest questions about your money, time and skills, and get a realistic hustle you could start this week.</p>
+<div id="quiz"></div>
+<button class="go" id="go" disabled>Show my match</button>
+<div class="result" id="result"></div>
+<div class="links">Read more: <a href="/newcomer/side-hustles-no-upfront-money/">side hustles with no money</a> · <a href="/newcomer/passive-income-realistically/">passive income, realistically</a></div>
+<p class="disc">This is a starting point, not financial advice or a guarantee of income. What you earn depends on the work you put in and the value you deliver.</p>
+<div class="foot">A free tool from Newcomer · newcomer field guides</div>
+</div>
+<script>
+var Q=[
+ {t:"How much money can you put in to start?",o:[["Zero — literally nothing",{svc:2,local:1}],["A little (under $100)",{prod:1,svc:1}],["Some, if it's worth it",{prod:1}]]},
+ {t:"How much time do you have a week?",o:[["A few scattered hours",{prod:2,svc:1}],["A couple of fixed evenings",{svc:2}],["Weekends / bigger blocks",{local:2,svc:1}]]},
+ {t:"What's your strongest edge?",o:[["Writing / words / organising",{svc:3}],["A practical/hands-on skill or knowledge",{local:2,prod:1}],["I'm good at explaining / teaching",{prod:2,svc:1}],["Honestly not sure yet",{svc:2}]]},
+ {t:"Do you want to work online or locally?",o:[["Online, from anywhere",{svc:2,prod:2}],["Locally / in person is fine",{local:3}],["Don't care, just want income",{svc:1,local:1,prod:1}]]},
+ {t:"Your goal right now?",o:[["Fastest cash possible",{svc:2,local:2}],["Build something that keeps paying",{prod:3}],["A steady bit on the side",{svc:1,local:1}]]}
+];
+var R={
+ svc:{name:"An AI-accelerated freelance service",why:"You have time-scarce, skill-based potential and want cash fast. Sell a done-for-you result — writing, editing, admin, ad copy, repurposing — and use AI to deliver it 3–5× faster. It pays from day one, needs no audience, and scales into a retainer.",
+   steps:["Pick ONE result you can already deliver decently","Use AI to do it faster; sell the outcome, not 'AI'","Message 5–10 small businesses/creators with a clear offer","Deliver fast, get a testimonial, raise your price"]},
+ local:{name:"A local service hustle",why:"You've got weekend blocks, a practical edge, and don't need it to be online. Local services — tutoring, pet sitting, lessons, cleaning, handywork — have real demand, zero audience needed, and often zero startup cost. Your neighbourhood is the market.",
+   steps:["Pick one service you can do well","Set a fair price for a few hours' work","Post in local groups and tell people directly","Do a great first job, ask for referrals, repeat"]},
+ prod:{name:"A small digital product",why:"You have scattered hours and want something that keeps paying after you build it. A template, guide, checklist or short course sells infinitely at zero marginal cost. Slower to first sale, but the closest thing to 'passive' that's actually real.",
+   steps:["Earn actively first so you learn what people pay for","Package that knowledge into one simple product","Put it where buyers already search","Improve it and add more over time"]}
+};
+var quiz=document.getElementById('quiz'),go=document.getElementById('go'),ans={};
+Q.forEach(function(q,i){var d=document.createElement('div');d.className='q';var h='<div class="t">'+(i+1)+'. '+q.t+'</div>';q.o.forEach(function(o,j){h+='<button class="opt" data-q="'+i+'" data-j="'+j+'">'+o[0]+'</button>';});d.innerHTML=h;quiz.appendChild(d);});
+quiz.addEventListener('click',function(e){var b=e.target.closest('.opt');if(!b)return;var qi=+b.dataset.q;b.parentElement.querySelectorAll('.opt').forEach(function(x){x.classList.remove('sel');});b.classList.add('sel');ans[qi]=+b.dataset.j;go.disabled=Object.keys(ans).length<Q.length;});
+go.addEventListener('click',function(){
+  var s={svc:0,local:0,prod:0};
+  Object.keys(ans).forEach(function(qi){var w=Q[qi].o[ans[qi]][1];for(var k in w)s[k]+=w[k];});
+  var win=Object.keys(s).sort(function(a,b){return s[b]-s[a];})[0];var r=R[win];
+  var el=document.getElementById('result');
+  el.innerHTML='<div class="win">Your match: <span>'+r.name+'</span></div>'+
+    '<div class="why">'+r.why+'</div>'+
+    '<ul class="steps">'+r.steps.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>'+
+    '<a class="cta" href="https://payhip.com/b/5UDtJ">Get the step-by-step → The AI Income Starter Kit ($12)</a>';
+  el.className='result show';el.scrollIntoView({block:'center'});
+});
+if(location.hash==="#demo"){Q.forEach(function(q,i){ans[i]=0;quiz.querySelectorAll('[data-q="'+i+'"]')[0].classList.add('sel');});go.disabled=false;go.click();}
+</script>
+</body></html>
