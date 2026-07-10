@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>How to use AI to write a resume & cover letter that get interviews (2026) — Newcomer</title>
+<meta name="description" content="How to use ChatGPT and other AI tools to write a resume and cover letter that pass ATS filters and get interviews in 2026 — with the prompts and mistakes to avoid.">
+<link rel="canonical" href="https://willylam2222-bot.github.io/newcomer/ai-resume-cover-letter/">
+<meta property="og:title" content="How to use AI to write a resume & cover letter that get interviews (2026) — Newcomer"><meta property="og:description" content="How to use ChatGPT and other AI tools to write a resume and cover letter that pass ATS filters and get interviews in 2026 — with the prompts and mistakes to avoid.">
+<meta property="og:type" content="article"><meta property="og:url" content="https://willylam2222-bot.github.io/newcomer/ai-resume-cover-letter/">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F6F3EC;--paper:#FBFAF6;--sand:#ECE6D8;--ink:#1A1712;--muted:#726B5E;--terra:#C2502A;--amber:#E0843C;--line:rgba(26,23,18,.13);}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:"Inter",system-ui,sans-serif;line-height:1.68;font-size:17px;-webkit-font-smoothing:antialiased;}
+.serif{font-family:"Fraunces",Georgia,serif;}
+a{color:var(--terra);text-decoration:none;}a:hover{text-decoration:underline;}
+.wrap{max-width:760px;margin:0 auto;padding:0 22px;}
+.wide{max-width:1080px;}
+nav{border-bottom:1px solid var(--line);background:var(--paper);position:sticky;top:0;z-index:10;backdrop-filter:saturate(1.2);}
+nav .row{max-width:1080px;margin:0 auto;padding:15px 22px;display:flex;justify-content:space-between;align-items:center;}
+nav .logo{font-family:"Fraunces";font-weight:900;font-size:22px;color:var(--ink);letter-spacing:-.3px;}
+nav .logo .dot{color:var(--terra);}
+nav .links a{color:var(--muted);font-weight:600;font-size:14.5px;margin-left:20px;}
+nav .links a:hover{color:var(--ink);text-decoration:none;}
+h1{font-family:"Fraunces";font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.08;letter-spacing:-.6px;margin:0 0 6px;}
+h2{font-family:"Fraunces";font-weight:700;font-size:26px;margin:38px 0 10px;line-height:1.2;}
+h3{font-weight:800;font-size:18.5px;margin:26px 0 6px;}
+p{margin:0 0 16px;}
+article ul,article ol{margin:0 0 18px 4px;padding-left:22px;}
+article li{margin-bottom:9px;}
+strong{font-weight:700;color:var(--ink);}
+.kick{font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--terra);font-size:12.5px;}
+.meta{color:var(--muted);font-size:14px;margin:10px 0 4px;}
+.hero{padding:44px 0 26px;border-bottom:1px solid var(--line);}
+.lead{font-size:20px;color:#3a352b;line-height:1.55;margin:12px 0 0;}
+.callout{background:var(--paper);border-left:4px solid var(--terra);border-radius:0 8px 8px 0;padding:15px 18px;margin:22px 0;}
+.callout .t{font-family:"Fraunces";font-weight:700;color:var(--terra);margin-bottom:3px;font-size:16px;}
+.callout p{margin:0;font-size:15.5px;}
+table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px;}
+th{background:var(--ink);color:var(--cream);text-align:left;padding:9px 11px;font-size:13.5px;}
+td{padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:var(--paper);}
+.tag{display:inline-block;background:var(--sand);border-radius:20px;padding:3px 11px;font-size:12.5px;font-weight:700;color:var(--muted);}
+.cta{background:var(--ink);color:var(--cream);border-radius:14px;padding:26px;margin:40px 0;display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+.cta .t{font-family:"Fraunces";font-weight:900;font-size:21px;line-height:1.25;flex:1;min-width:230px;}
+.cta .t .em{color:var(--amber);font-style:italic;}
+.cta .t p{color:rgba(246,243,236,.8);font-size:14px;font-weight:400;margin-top:6px;font-family:"Inter";}
+.cta a.btn{background:var(--terra);color:#fff;font-weight:800;padding:13px 24px;border-radius:10px;white-space:nowrap;}
+.cta a.btn:hover{text-decoration:none;background:#a8431f;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin:26px 0;}
+.pcard{display:block;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:20px;transition:transform .12s,box-shadow .12s;}
+.pcard:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(26,23,18,.08);text-decoration:none;}
+.pcard .c{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--terra);}
+.pcard .h{display:block;font-family:"Fraunces";font-weight:700;font-size:19px;color:var(--ink);margin:7px 0 5px;line-height:1.2;}
+.pcard .d{display:block;color:var(--muted);font-size:14.5px;}
+.section-h{font-family:"Fraunces";font-weight:900;font-size:24px;margin:34px 0 4px;}
+footer{border-top:1px solid var(--line);margin-top:50px;padding:28px 0 60px;color:var(--muted);font-size:13.5px;}
+footer a{color:var(--muted);}
+.related{border-top:1px solid var(--line);margin-top:40px;padding-top:20px;}
+.related a{display:block;font-weight:600;margin-bottom:8px;}
+.disc{font-size:12.5px;color:var(--muted);margin-top:30px;padding-top:16px;border-top:1px solid var(--line);}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to use AI to write a resume & cover letter that get interviews (2026)", "description": "How to use ChatGPT and other AI tools to write a resume and cover letter that pass ATS filters and get interviews in 2026 \u2014 with the prompts and mistakes to avoid.", "author": {"@type": "Organization", "name": "Newcomer"}, "publisher": {"@type": "Organization", "name": "Newcomer"}, "mainEntityOfPage": "https://willylam2222-bot.github.io/newcomer/ai-resume-cover-letter/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is it OK to use AI to write my resume and cover letter?", "acceptedAnswer": {"@type": "Answer", "text": "Yes \u2014 most applicants now do, and used well it produces a sharper, better-tailored application faster. The key is to feed AI your real experience and have it reshape and tighten it, never to let it invent duties or metrics. Treat it as an editor and structurer, not a fiction writer."}}, {"@type": "Question", "name": "Will an AI-written resume get rejected by ATS systems?", "acceptedAnswer": {"@type": "Answer", "text": "Not if you do it right. Applicant-tracking systems reject resumes for missing keywords and broken formatting, not for being AI-assisted. Have AI mirror the job posting's exact skills and keywords and use a clean, single-column layout, and you'll pass the screen more reliably than most."}}, {"@type": "Question", "name": "How do I stop my AI cover letter from sounding generic?", "acceptedAnswer": {"@type": "Answer", "text": "Give AI specifics \u2014 the company, your genuine reason for wanting the role, and one concrete thing you'd contribute \u2014 and explicitly ban clich\u00e9s like 'team player' and 'fast-paced environment'. Keep it to three short paragraphs and edit the final 10% yourself so it reads like a real person."}}]}</script>
+</head><body>
+<nav><div class="row"><a href="https://willylam2222-bot.github.io/newcomer/" class="logo">Newcomer<span class="dot">.</span></a>
+<div class="links"><a href="https://willylam2222-bot.github.io/newcomer/#singapore">Singapore</a><a href="https://willylam2222-bot.github.io/newcomer/about/">About</a><a href="https://payhip.com/b/wKgtQ">Move-In Kit</a></div></div></nav>
+<div class="hero"><div class="wrap"><div class="kick">AI Skills · Career</div><h1 class="serif">AI resumes and cover letters that actually get interviews — a 2026 guide</h1><p class="lead">AI can turn a blank page into a solid resume in minutes — or into generic filler that recruiters delete on sight. The difference is entirely in how you use it. Here's how to get the interview, not the auto-reject.</p><div class="meta">By the <a href="https://willylam2222-bot.github.io/newcomer/about/">Newcomer editorial team</a> · Last verified July 2026 · 6 min read</div></div></div><div class="wrap"><article>
+<p>Recruiters and applicant-tracking systems (ATS) now see thousands of AI-written applications, and the obvious ones stand out for the wrong reasons — vague, buzzword-stuffed, interchangeable. Used well, though, AI is the best resume assistant you've ever had: it structures, sharpens and tailors far faster than you can alone. The trick is to feed it <strong>your real specifics</strong> and make it edit, not invent.</p>
+<h2>Get the resume right first</h2>
+<ul>
+<li><strong>Give AI your raw material.</strong> Paste your real experience, numbers and the exact job description. Generic in, generic out — specifics in, tailored out.</li>
+<li><strong>Make it rewrite bullets as achievements.</strong> Ask it to turn "responsible for social media" into results with metrics: "grew Instagram from 2k to 9k in six months." You supply the truth; it supplies the punch.</li>
+<li><strong>Match the job's language.</strong> Have AI mirror the exact skills and keywords from the posting — that's what gets you through the ATS keyword filter.</li>
+<li><strong>Keep the format boring.</strong> Ask for a clean, single-column, standard-heading layout. Fancy templates confuse ATS parsers and can drop half your resume.</li>
+</ul>
+<div class="callout"><div class="t">A prompt that works</div>"Here is my experience: [paste]. Here is the job description: [paste]. Rewrite my resume bullet points as specific, metric-driven achievements that match this role's key requirements and keywords. Keep it truthful to what I gave you — do not invent numbers or duties."</div>
+<h2>Then the cover letter — where AI saves the most time</h2>
+<ul>
+<li><strong>Give it three things</strong>: the company, why you actually want this role, and one specific thing you'd contribute. AI turns that into a tight, human letter.</li>
+<li><strong>Kill the clichés.</strong> Explicitly tell it: no "I am writing to express my interest", no "team player", no "fast-paced environment". Ask for plain, specific, confident language.</li>
+<li><strong>Keep it short.</strong> Three paragraphs. AI loves to pad — trim it back.</li>
+</ul>
+<h2>The mistakes that get you auto-rejected</h2>
+<ul>
+<li><strong>Letting AI invent things.</strong> Fake metrics and duties fall apart in the interview — and lying on applications is a real risk. Only ever have it reshape true information.</li>
+<li><strong>Sending the same one everywhere.</strong> The whole advantage of AI is fast tailoring. Re-tailor for each role; that takes two minutes now.</li>
+<li><strong>Leaving the "AI voice" in.</strong> Read it aloud. If it sounds like a press release, tell AI to make it sound like a competent human, then edit the last 10% yourself.</li>
+<li><strong>Over-formatting.</strong> Graphics, columns and tables can break ATS parsing. Simple text wins the screening round.</li>
+</ul>
+<p>Used this way, AI won't get you hired on its own — but it removes the blank-page paralysis, gets you past the filters, and frees your energy for the part that matters: the interview. If you want to get genuinely fluent with AI for this and everything else at work, the Everyday AI Handbook below is the plain-English playbook.</p>
+<div class="cta"><div class="t">Want it all in one place? <span class="em">The Everyday AI Handbook.</span>
+<p>the context method, five prompt patterns, 20 copy-paste workflows, verification habits and a 30-day plan. Instant download.</p></div>
+<a class="btn" href="https://payhip.com/b/Hkhzv">Get the Kit → $9</a></div><div class="related"><div class="kick">Keep reading</div><a href="https://willylam2222-bot.github.io/newcomer/ai-for-freelancers/">AI for freelancers: earn more per hour in 2026</a><a href="https://willylam2222-bot.github.io/newcomer/ai-for-job-search/">Using AI for your job search (2026): CV, cover letters & interview prep that works</a><a href="https://willylam2222-bot.github.io/newcomer/ai-for-real-estate-agents/">AI for real estate agents: close the admin gap in 2026</a><a href="https://willylam2222-bot.github.io/newcomer/ai-for-small-business-owners/">AI for small business owners: automate the boring stuff (2026)</a></div><p class="disc"><strong>Sources & verification:</strong> 2026 hiring, ATS and recruiter-screening patterns. This guide is independent educational information, last verified July 2026; rules change, so confirm specifics with the official source before you rely on them. Spotted something out of date? It matters to us — see our <a href="https://willylam2222-bot.github.io/newcomer/about/">editorial standards</a>.</p></article></div><footer><div class="wrap wide">
+<p><strong>Newcomer</strong> — plain, practical guides to living in, moving to and visiting places around the world. Written to be genuinely useful, not to fill a page.</p>
+<p style="margin-top:8px;">Independent educational guidance, not legal, financial, immigration or medical advice. Laws, prices and rules change — always verify against official sources before acting.</p>
+<p style="margin-top:8px;"><a href="https://willylam2222-bot.github.io/newcomer/">Home</a> · <a href="https://payhip.com/b/wKgtQ">The Move-In Kit</a> · <a href="https://willylam2222-bot.github.io/singapore-rent-check/">Rent Reality Check</a></p>
+</div></footer></body></html>
