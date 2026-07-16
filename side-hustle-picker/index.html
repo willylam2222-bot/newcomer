@@ -72,7 +72,7 @@ go.addEventListener('click',function(){
   el.innerHTML='<div class="win">Your match: <span>'+r.name+'</span></div>'+
     '<div class="why">'+r.why+'</div>'+
     '<ul class="steps">'+r.steps.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>'+
-    '<a class="cta" href="https://payhip.com/b/5UDtJ">Get the step-by-step → The AI Income Starter Kit ($12)</a>';
+    '<a class="cta" href="https://payhip.com/b/5UDtJ">Get the step-by-step → The AI Income Starter Kit — just $0.99</a>';
   el.className='result show';el.scrollIntoView({block:'center'});
 });
 if(location.hash==="#demo"){Q.forEach(function(q,i){ans[i]=0;quiz.querySelectorAll('[data-q="'+i+'"]')[0].classList.add('sel');});go.disabled=false;go.click();}
